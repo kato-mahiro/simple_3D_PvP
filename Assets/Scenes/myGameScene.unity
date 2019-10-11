@@ -467,10 +467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotateSpeed: 5
   anim: {fileID: 1361054627}
   gravity: 1
-  jumpPower: 15
+  jumpPower: 20
 --- !u!114 &1361054630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,9 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c7368220cd44ac695f574880ab9d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 20
-  gravity: 20
-  anim: {fileID: 1361054627}
 --- !u!143 &1361054631
 CharacterController:
   m_ObjectHideFlags: 0
