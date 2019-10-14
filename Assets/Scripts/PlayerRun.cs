@@ -30,6 +30,7 @@ public class PlayerRun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
             if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) { transform.rotation = Quaternion.AngleAxis(45, new Vector3(0,1,0));}
@@ -69,7 +70,7 @@ public class PlayerRun : MonoBehaviour
 
         moveDirection.y -= gravity;
         controller.Move(moveDirection * Time.deltaTime);
-        Debug.Log(moveDirection.magnitude);
+        //Debug.Log(moveDirection.magnitude);
 
         switch((int)animation_ptn){
             case 0:
