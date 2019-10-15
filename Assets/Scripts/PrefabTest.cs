@@ -21,6 +21,7 @@ public class PrefabTest : MonoBehaviour
         if(Input.GetKey(KeyCode.F))
         {
             //Instantiate(obj, new Vector3(0.0f, 2.0f, 0.0f), Quaternion.identity);
+            Debug.Log(transform.rotation.eulerAngles.x);
             PlayerPosition = transform.position;
             Instantiate(obj, PlayerPosition, Quaternion.identity);
         }
