@@ -6,6 +6,7 @@ public class PlayerRun : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public float dash_speed;
     public Animator anim;
     public float gravity;
     public float jumpPower;
@@ -52,7 +53,19 @@ public class PlayerRun : MonoBehaviour
             else if(Input.GetKey(KeyCode.LeftArrow)) { transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); }
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection *= speed;
+
+            //Rキーを押しているとダッシュ
+            if(Input.GetKey(KeyCode.R))
+            {
+                moveDirection *= dash_speed; 
+                anim.SetFloat("running_speed",1.5f);
+            }
+            else
+            {
+                moveDirection *= speed;
+                anim.SetFloat("running_speed",1.0f);
+            }
+
             if(moveDirection.magnitude > 1.5f)
             {
                 animation_ptn = AnimationPatterns.Running;
