@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 228783341}
   - component: {fileID: 228783340}
   m_Layer: 5
-  m_Name: stamina_gauge
+  m_Name: staminaGauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
