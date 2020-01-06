@@ -33,22 +33,7 @@ public class PlayerRun : MonoBehaviour
         //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
-            if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) { transform.rotation = Quaternion.AngleAxis(45, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S)) { transform.rotation = Quaternion.AngleAxis(135, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)) { transform.rotation = Quaternion.AngleAxis(225, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) { transform.rotation = Quaternion.AngleAxis(315, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.W)) { transform.rotation = Quaternion.AngleAxis(0, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.D)) { transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.S)) { transform.rotation = Quaternion.AngleAxis(180, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.A)) { transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); }
-
-            if(Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow)) { transform.rotation = Quaternion.AngleAxis(45, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow)) { transform.rotation = Quaternion.AngleAxis(135, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow)) { transform.rotation = Quaternion.AngleAxis(225, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow)) { transform.rotation = Quaternion.AngleAxis(315, new Vector3(0,1,0));}
-            else if(Input.GetKey(KeyCode.UpArrow)) { transform.rotation = Quaternion.AngleAxis(0, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.RightArrow)) { transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.DownArrow)) { transform.rotation = Quaternion.AngleAxis(180, new Vector3(0,1,0)); }
+            if(Input.GetKey(KeyCode.RightArrow)) { transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); }
             else if(Input.GetKey(KeyCode.LeftArrow)) { transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); }
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -69,6 +54,7 @@ public class PlayerRun : MonoBehaviour
         }
 
         moveDirection.y -= gravity;
+        moveDirection.z = 0;
         controller.Move(moveDirection * Time.deltaTime);
         //Debug.Log(moveDirection.magnitude);
 
