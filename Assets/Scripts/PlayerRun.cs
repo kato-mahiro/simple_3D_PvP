@@ -48,7 +48,7 @@ public class PlayerRun : MonoBehaviour
             }
             if (Input.GetButtonDown("Jump")) 
             {
-                moveDirection.y += jumpPower; 
+                moveDirection.y += jumpPower;
                 animation_ptn = AnimationPatterns.Jumping;
             }
         }
