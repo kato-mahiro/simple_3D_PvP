@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerRun : MonoBehaviour
 {
+    GameObject refObj;
     // Start is called before the first frame update
     public float speed;
     public Animator anim;
@@ -48,9 +49,16 @@ public class PlayerRun : MonoBehaviour
             }
             if (Input.GetButtonDown("Jump")) 
             {
-                moveDirection.y += jumpPower;
-                animation_ptn = AnimationPatterns.Jumping;
+                refObj = GameObject.Find("HPctrl");
+                UIDirector hoge = refObj.GetComponent<UIDirector>();
+                if (hoge.hp > 0.3)
+                {
+                    animation_ptn = AnimationPatterns.Jumping;
+                    hoge.minus();
+                    moveDirection.y += jumpPower;
+                }
             }
+
         }
 
         moveDirection.y -= gravity;

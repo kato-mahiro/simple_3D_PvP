@@ -1112,7 +1112,7 @@ MonoBehaviour:
   speed: 5
   anim: {fileID: 1361054627}
   gravity: 0.5
-  jumpPower: 13
+  jumpPower: 15
 --- !u!114 &1361054630
 MonoBehaviour:
   m_ObjectHideFlags: 0
