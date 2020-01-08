@@ -19,7 +19,7 @@ public class ShotFireball : MonoBehaviour
         GameObject obj = (GameObject)Resources.Load("FireBall");
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(hoge.hp > 0.3)
+            if(hoge.sp > 0.3)
             {
                 GameObject firepoint = GameObject.Find("FirePoint");
                 Instantiate(obj, firepoint.transform.position , Quaternion.Euler(0,transform.rotation.eulerAngles.y ,0));

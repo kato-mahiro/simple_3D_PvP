@@ -51,7 +51,7 @@ public class PlayerRun : MonoBehaviour
             {
                 refObj = GameObject.Find("HPctrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();
-                if (hoge.hp > 0.3)
+                if (hoge.sp > 0.3)
                 {
                     animation_ptn = AnimationPatterns.Jumping;
                     hoge.minus();
