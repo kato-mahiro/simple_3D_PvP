@@ -35,8 +35,8 @@ public class FireballController : MonoBehaviour
             isFirst = false;
             Rigidbody rb = this.GetComponent<Rigidbody> ();
             //Vector3 force = new Vector3(transform.forward);
-            Vector3 force = this.gameObject.transform.up * fire_power +
-                            this.gameObject.transform.forward * -0.5f * fire_power;
+            Vector3 force = /*this.gameObject.transform.up * fire_power +*/
+                            this.gameObject.transform.forward *  fire_power;
             rb.AddForce(force, ForceMode.Impulse);
         }
         if(lifetime >= max_lifespan)

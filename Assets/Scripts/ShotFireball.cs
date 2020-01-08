@@ -17,7 +17,8 @@ public class ShotFireball : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             GameObject firepoint = GameObject.Find("FirePoint");
-            Instantiate(obj, firepoint.transform.position , Quaternion.Euler(90,transform.rotation.eulerAngles.y ,0));
+            Instantiate(obj, firepoint.transform.position , Quaternion.Euler(0,transform.rotation.eulerAngles.y ,0));
+            //Instantiate(obj, firepoint.transform.position , transform.Rotate(transform.right, 45));
         }
     }
 }
