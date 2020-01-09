@@ -14,7 +14,7 @@ public class ShotFireball : MonoBehaviour
 
     void Update()
     {
-        refObj = GameObject.Find("HPctrl");
+        refObj = GameObject.Find("BarCtrl");
         UIDirector hoge = refObj.GetComponent<UIDirector>();
         GameObject obj = (GameObject)Resources.Load("FireBall");
         if (Input.GetKeyDown(KeyCode.F))

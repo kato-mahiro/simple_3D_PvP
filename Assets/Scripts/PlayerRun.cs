@@ -49,7 +49,7 @@ public class PlayerRun : MonoBehaviour
             }
             if (Input.GetButtonDown("Jump")) 
             {
-                refObj = GameObject.Find("HPctrl");
+                refObj = GameObject.Find("BarCtrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();
                 if (hoge.sp > 0.3)
                 {
