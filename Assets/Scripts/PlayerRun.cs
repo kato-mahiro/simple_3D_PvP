@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerRun : MonoBehaviour
 {
+    public AudioClip footsound;
+    public AudioClip jumpsound;
+    AudioSource audioSource;
     GameObject refObj;
     // Start is called before the first frame update
     public float speed;
@@ -23,6 +26,7 @@ public class PlayerRun : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>(); //これで、Unityちゃんに関連づけられているAnimatorオブジェクトの参照が取得できる
         controller = GetComponent<CharacterController>();
         animation_ptn = AnimationPatterns.Idling;
@@ -34,8 +38,16 @@ public class PlayerRun : MonoBehaviour
         //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
-            if(Input.GetKey(KeyCode.RightArrow)) { transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); }
-            else if(Input.GetKey(KeyCode.LeftArrow)) { transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); }
+            if(Input.GetKey(KeyCode.RightArrow)) 
+            { 
+                transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); 
+                //audioSource.PlayOneShot(footsound);
+            }
+            else if(Input.GetKey(KeyCode.LeftArrow)) 
+            {
+                transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); 
+                //audioSource.PlayOneShot(footsound);
+            }
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection *= speed;
@@ -53,6 +65,7 @@ public class PlayerRun : MonoBehaviour
                 UIDirector hoge = refObj.GetComponent<UIDirector>();
                 if (hoge.sp > 0.3)
                 {
+                    audioSource.PlayOneShot(jumpsound);
                     animation_ptn = AnimationPatterns.Jumping;
                     hoge.minus();
                     moveDirection.y += jumpPower;

@@ -4,6 +4,8 @@ using UnityEngine.UI; // ←※これを忘れずに入れる
 
 public class UIDirector : MonoBehaviour
 {
+    public AudioClip damagesound;
+    AudioSource audioSource;
 
     public float sp =1.0f;
     public float hp =1.0f;
@@ -15,6 +17,7 @@ public class UIDirector : MonoBehaviour
         // スライダーを取得する
         spslider1 = GameObject.Find("SPBar1").GetComponent<Slider>();
         hpslider1 = GameObject.Find("HPBar1").GetComponent<Slider>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void minus()
@@ -25,6 +28,7 @@ public class UIDirector : MonoBehaviour
 
     public void damage()
     {
+        audioSource.PlayOneShot(damagesound);
         this.hp -= 0.005f;
     }
 
