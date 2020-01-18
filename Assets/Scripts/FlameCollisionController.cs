@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class FlameCollisionController : MonoBehaviour
 {
+    GameObject hpbar;
+    UIDirector script;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        hpbar = GameObject.Find("BarCtrl");
+        script = hpbar.GetComponent<UIDirector>();
+    }
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // hit.gameObjectで衝突したオブジェクト情報が得られる
         if(hit.gameObject.name == "Flame(Clone)")
         {
             Debug.Log("アツゥイ");
+            script.damage();
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(hpbar);
     }
 }

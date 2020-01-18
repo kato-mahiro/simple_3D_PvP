@@ -7,8 +7,8 @@ public class UIDirector : MonoBehaviour
 
     public float sp =1.0f;
     public float hp =1.0f;
-    Slider spslider1;
-    Slider hpslider1;
+    public Slider spslider1;
+    public Slider hpslider1;
 
     public void Start()
     {
@@ -21,6 +21,11 @@ public class UIDirector : MonoBehaviour
     {
         //Debug.Log(this.sp);
         this.sp -= 0.3f;
+    }
+
+    public void damage()
+    {
+        this.hp -= 0.005f;
     }
 
     public void Update()
