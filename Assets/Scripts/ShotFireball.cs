@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ShotFireball : MonoBehaviour
 {
+    public AudioClip sound1;
+    AudioSource audioSource;
     GameObject refObj;
     private Vector3 PlayerPosition;
     // Use this for initialization
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -21,6 +24,7 @@ public class ShotFireball : MonoBehaviour
         {
             if(hoge.sp > 0.3)
             {
+                audioSource.PlayOneShot(sound1);
                 GameObject firepoint = GameObject.Find("FirePoint");
                 Instantiate(obj, firepoint.transform.position , Quaternion.Euler(0,transform.rotation.eulerAngles.y ,0));
                 hoge.minus();
