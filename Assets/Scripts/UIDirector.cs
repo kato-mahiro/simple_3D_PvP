@@ -19,7 +19,7 @@ public class UIDirector : MonoBehaviour
 
     public void minus()
     {
-        Debug.Log(this.sp);
+        //Debug.Log(this.sp);
         this.sp -= 0.3f;
     }
 
