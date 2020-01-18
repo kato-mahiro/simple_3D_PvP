@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision_hoge : MonoBehaviour
+public class FlameCollisionController : MonoBehaviour
 {
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
