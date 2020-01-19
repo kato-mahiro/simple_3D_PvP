@@ -53,7 +53,6 @@ public class PlayerRun : MonoBehaviour
             }
 
             moveDirection = new Vector3(running_speed, 0, 0);
-            Debug.Log(moveDirection);
             moveDirection *= speed;
             if(moveDirection.magnitude > 1.5f)
             {

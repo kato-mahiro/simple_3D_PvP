@@ -19,7 +19,6 @@ public class FlameCollisionController2 : MonoBehaviour
         // hit.gameObjectで衝突したオブジェクト情報が得られる
         if(hit.gameObject.name == "Flame(Clone)" || hit.gameObject.name == "Fireball(Clone)")
         {
-            Debug.Log("アツゥイ");
             script.damage2();
         }
     }
@@ -28,6 +27,5 @@ public class FlameCollisionController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hpbar);
     }
 }
