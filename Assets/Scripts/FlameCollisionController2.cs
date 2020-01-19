@@ -17,7 +17,7 @@ public class FlameCollisionController2 : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // hit.gameObjectで衝突したオブジェクト情報が得られる
-        if(hit.gameObject.name == "Flame(Clone)")
+        if(hit.gameObject.name == "Flame(Clone)" || hit.gameObject.name == "Fireball(Clone)")
         {
             Debug.Log("アツゥイ");
             script.damage2();

@@ -18,6 +18,7 @@ public class FireballController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.tag);
         GameObject obj = (GameObject)Resources.Load("Flame");
         //Debug.Log("衝突");
         Instantiate(obj, this.transform.position, Quaternion.identity);
