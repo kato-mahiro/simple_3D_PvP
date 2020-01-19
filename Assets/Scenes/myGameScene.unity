@@ -428,6 +428,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &170914318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -575,10 +649,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footsound: {fileID: 0}
   jumpsound: {fileID: 8300000, guid: 714286d1e8e2cd343aa74f823333276e, type: 3}
-  speed: 5
+  speed: 4
   anim: {fileID: 0}
   gravity: 0.5
-  jumpPower: 11
+  jumpPower: 6
 --- !u!1 &193165213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,7 +1453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414369490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.78, y: 8.09, z: 0.3}
+  m_LocalPosition: {x: -7.78, y: 7.44, z: 0.3}
   m_LocalScale: {x: 8.23775, y: 0.105788074, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1470,7 +1544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443330970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.72, y: 3.9, z: 0.3}
+  m_LocalPosition: {x: 1.72, y: 3.57, z: 0.3}
   m_LocalScale: {x: 10.624185, y: 0.105788074, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1546,7 +1620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.5810013, y: -0.16900015}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517009928
@@ -1972,6 +2046,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717998663}
   m_CullTransparentMesh: 0
+--- !u!1 &958476995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958476996}
+  - component: {fileID: 958476997}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958476996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958476995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.21, y: 1.24, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958476997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958476995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9485c0aedd929c34db46ed1041472cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1036326768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2130,7 +2247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049706001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.03, y: 9.43, z: 0.3}
+  m_LocalPosition: {x: 2.03, y: 8.69, z: 0.3}
   m_LocalScale: {x: 8.23775, y: 0.105788074, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2221,7 +2338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175426571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.16, y: 2.06, z: 0.3}
+  m_LocalPosition: {x: 9.16, y: 1.79, z: 0.3}
   m_LocalScale: {x: 8.23775, y: 0.105788074, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2624,10 +2741,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footsound: {fileID: 8300000, guid: 202882052d5451646ba4a5fd735737f0, type: 3}
   jumpsound: {fileID: 8300000, guid: 714286d1e8e2cd343aa74f823333276e, type: 3}
-  speed: 5
+  speed: 4
   anim: {fileID: 1361054627}
   gravity: 0.5
-  jumpPower: 11
+  jumpPower: 6
 --- !u!114 &1361054630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,7 +3548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896848636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.66, y: 5.65, z: 0.3}
+  m_LocalPosition: {x: 12.02, y: 4.92, z: 0.3}
   m_LocalScale: {x: 8.23775, y: 0.105788074, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3594,7 +3711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920101081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 6.09, z: 0.3}
+  m_LocalPosition: {x: -1.52, y: 5.64, z: 0.3}
   m_LocalScale: {x: 9.293331, y: 0.105788074, z: 1.7907791}
   m_Children: []
   m_Father: {fileID: 0}

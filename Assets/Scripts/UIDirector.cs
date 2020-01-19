@@ -41,19 +41,19 @@ public class UIDirector : MonoBehaviour
     public void damage()
     {
         audioSource.PlayOneShot(damagesound);
-        this.hp -= 0.005f;
+        this.hp -= 0.02f;
     }
 
     public void damage2()
     {
         audioSource.PlayOneShot(damagesound);
-        this.hp2 -= 0.005f;
+        this.hp2 -= 0.02f;
     }
 
     public void Update()
     {
-        sp += 0.004f;
-        sp2 += 0.004f;
+        sp += 0.01f;
+        sp2 += 0.01f;
         if (sp > 1)
         {
             sp=1;
