@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRun : MonoBehaviour
+public class PlayerRun2 : MonoBehaviour
 {
     public AudioClip footsound;
     public AudioClip jumpsound;
@@ -39,21 +39,20 @@ public class PlayerRun : MonoBehaviour
         //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
-            if(Input.GetKey(KeyCode.RightArrow)) 
+            if(Input.GetKey(KeyCode.D)) 
             { 
                 transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); 
-                running_speed=1.0f;
                 //audioSource.PlayOneShot(footsound);
+                running_speed=1.0f;
             }
-            else if(Input.GetKey(KeyCode.LeftArrow)) 
+            else if(Input.GetKey(KeyCode.A)) 
             {
                 transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); 
-                running_speed=-1.0f;
                 //audioSource.PlayOneShot(footsound);
+                running_speed=-1.0f;
             }
 
             moveDirection = new Vector3(running_speed, 0, 0);
-            Debug.Log(moveDirection);
             moveDirection *= speed;
             if(moveDirection.magnitude > 1.5f)
             {
@@ -63,7 +62,7 @@ public class PlayerRun : MonoBehaviour
             {
                 animation_ptn = AnimationPatterns.Idling;
             }
-            if (Input.GetButtonDown("Jump")) 
+            if (Input.GetKeyDown(KeyCode.O)) 
             {
                 refObj = GameObject.Find("BarCtrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();
@@ -71,7 +70,7 @@ public class PlayerRun : MonoBehaviour
                 {
                     audioSource.PlayOneShot(jumpsound);
                     animation_ptn = AnimationPatterns.Jumping;
-                    hoge.minus();
+                    hoge.minus2();
                     moveDirection.y += jumpPower;
                 }
             }
