@@ -332,6 +332,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &170914318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -464,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b933969580a3790439ad04f8fd41df26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
+  sound1: {fileID: 8300000, guid: 585913e487d2630419ea7520ac21a3d3, type: 3}
 --- !u!114 &170914326
 MonoBehaviour:
   m_ObjectHideFlags: 0

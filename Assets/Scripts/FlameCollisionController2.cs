@@ -20,7 +20,7 @@ public class FlameCollisionController2 : MonoBehaviour
         if(hit.gameObject.name == "Flame(Clone)")
         {
             Debug.Log("アツゥイ");
-            script.damage();
+            script.damage2();
         }
     }
 
