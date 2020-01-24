@@ -7,14 +7,16 @@ public class UIDirector : MonoBehaviour
     public AudioClip damagesound;
     AudioSource audioSource;
 
-    public float sp =1.0f;
-    public float hp =1.0f;
-    public float sp2 =1.0f;
-    public float hp2 =1.0f;
+    public float sp = 1.0f;
+    public float hp = 1.0f;
+    public float sp2 = 1.0f;
+    public float hp2 = 1.0f;
     public Slider spslider1;
     public Slider hpslider1;
     public Slider spslider2;
     public Slider hpslider2;
+
+    GameObject refObj;
 
     public void Start()
     {
@@ -24,6 +26,7 @@ public class UIDirector : MonoBehaviour
         spslider2 = GameObject.Find("SPBar2").GetComponent<Slider>();
         hpslider2 = GameObject.Find("HPBar2").GetComponent<Slider>();
         audioSource = GetComponent<AudioSource>();
+        refObj = GameObject.Find("Message");
     }
 
     public void minus()
@@ -52,6 +55,7 @@ public class UIDirector : MonoBehaviour
 
     public void Update()
     {
+        MessageManager m = refObj.GetComponent<MessageManager>();
         sp += 0.01f;
         sp2 += 0.01f;
         if (sp > 1)
@@ -72,6 +76,16 @@ public class UIDirector : MonoBehaviour
             sp2 = 0;
         }
 
+        if(hp <= 0.0f)
+        {
+            m.BlueWin(true);
+            //Debug.Log("青の子の勝ち");
+        }
+        else if(hp2 <= 0.0f)
+        {
+            m.BlueWin(false);
+            //Debug.Log("オレンジの勝ち");
+        }
         // spゲージに値を設定
         spslider1.value = sp;
         hpslider1.value = hp;

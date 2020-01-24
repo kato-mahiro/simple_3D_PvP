@@ -18,7 +18,7 @@ public class Logger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.frameCount);
+        //Debug.Log(Time.frameCount);
         GameObject p1 = GameObject.Find("Player");
         logtext = "";
         logtext += p1.transform.position.x;
