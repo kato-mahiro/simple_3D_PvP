@@ -62,7 +62,7 @@ public class PlayerRun : MonoBehaviour
             {
                 animation_ptn = AnimationPatterns.Idling;
             }
-            if (Input.GetButtonDown("Jump")) 
+            if(Input.GetKey(KeyCode.P))
             {
                 refObj = GameObject.Find("BarCtrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();

@@ -20,7 +20,7 @@ public class ShotFireball2 : MonoBehaviour
         refObj = GameObject.Find("BarCtrl");
         UIDirector hoge = refObj.GetComponent<UIDirector>();
         GameObject obj = (GameObject)Resources.Load("FireBall");
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if(hoge.sp2 > 0.3)
             {
