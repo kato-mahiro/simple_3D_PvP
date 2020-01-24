@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI; // ←※これを忘れずに入れる
+using System.Threading.Tasks;
 
 public class UIDirector : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class UIDirector : MonoBehaviour
         this.hp2 -= 0.02f;
     }
 
-    public void Update()
+    public async void Update()
     {
         MessageManager m = refObj.GetComponent<MessageManager>();
         sp += 0.01f;
@@ -80,11 +81,15 @@ public class UIDirector : MonoBehaviour
         {
             m.BlueWin(true);
             //Debug.Log("青の子の勝ち");
+            await Task.Delay(1000);
+            UnityEditor.EditorApplication.isPlaying = false;
         }
         else if(hp2 <= 0.0f)
         {
             m.BlueWin(false);
             //Debug.Log("オレンジの勝ち");
+            await Task.Delay(1000);
+            UnityEditor.EditorApplication.isPlaying = false;
         }
         // spゲージに値を設定
         spslider1.value = sp;
