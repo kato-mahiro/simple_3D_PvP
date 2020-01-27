@@ -20,7 +20,7 @@ public class ShotFireball : MonoBehaviour
         refObj = GameObject.Find("BarCtrl");
         UIDirector hoge = refObj.GetComponent<UIDirector>();
         GameObject obj = (GameObject)Resources.Load("FireBall");
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetButtonDown("Fire1"))
         {
             if(hoge.sp > 0.3)
             {

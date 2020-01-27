@@ -39,13 +39,14 @@ public class PlayerRun : MonoBehaviour
         //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
-            if(Input.GetKey(KeyCode.RightArrow)) 
+            if(Input.GetAxis("Horizontal") > 0)
             { 
                 transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); 
                 running_speed=1.0f;
                 //audioSource.PlayOneShot(footsound);
             }
-            else if(Input.GetKey(KeyCode.LeftArrow)) 
+            //else if(Input.GetKey(KeyCode.LeftArrow)) 
+            else if(Input.GetAxis("Horizontal") < 0)
             {
                 transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); 
                 running_speed=-1.0f;
@@ -62,7 +63,7 @@ public class PlayerRun : MonoBehaviour
             {
                 animation_ptn = AnimationPatterns.Idling;
             }
-            if(Input.GetKey(KeyCode.P))
+            if(Input.GetButtonDown("Jump"))
             {
                 refObj = GameObject.Find("BarCtrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();
