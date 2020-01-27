@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShotFireball2 : MonoBehaviour
 {
     public AudioClip sound1;
+    public CharacterController CC;
     AudioSource audioSource;
     GameObject refObj;
     private Vector3 PlayerPosition;
@@ -15,6 +16,10 @@ public class ShotFireball2 : MonoBehaviour
 
     }
 
+    void Restart()
+    {
+        CC.enabled = true;
+    }
     void Update()
     {
         refObj = GameObject.Find("BarCtrl");
@@ -29,6 +34,10 @@ public class ShotFireball2 : MonoBehaviour
                 Instantiate(obj, firepoint.transform.position , Quaternion.Euler(0,transform.rotation.eulerAngles.y ,0));
                 hoge.minus2();
                 //Instantiate(obj, firepoint.transform.position , transform.Rotate(transform.right, 45));
+                CC=CC.GetComponent<CharacterController>();
+                CC.enabled = false;
+
+                Invoke("Restart", 1.0f);
             }
         }
     }
