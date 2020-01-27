@@ -39,13 +39,13 @@ public class PlayerRun2 : MonoBehaviour
         //Debug.Log(transform.position);
         if (controller.isGrounded) 
         {
-            if(Input.GetKey(KeyCode.D)) 
+            if(Input.GetKey(KeyCode.L)) 
             { 
                 transform.rotation = Quaternion.AngleAxis(90, new Vector3(0,1,0)); 
                 //audioSource.PlayOneShot(footsound);
                 running_speed=1.0f;
             }
-            else if(Input.GetKey(KeyCode.A)) 
+            else if(Input.GetKey(KeyCode.J))
             {
                 transform.rotation = Quaternion.AngleAxis(270, new Vector3(0,1,0)); 
                 //audioSource.PlayOneShot(footsound);
@@ -62,7 +62,7 @@ public class PlayerRun2 : MonoBehaviour
             {
                 animation_ptn = AnimationPatterns.Idling;
             }
-            if (Input.GetKeyDown(KeyCode.W)) 
+            if (Input.GetKeyDown(KeyCode.Space)) 
             {
                 refObj = GameObject.Find("BarCtrl");
                 UIDirector hoge = refObj.GetComponent<UIDirector>();

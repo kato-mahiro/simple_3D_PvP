@@ -32,27 +32,30 @@ public class Logger : MonoBehaviour
         logtext += p2.transform.position.y;
         logtext += ", ";
 
-        if(Input.GetKey(KeyCode.D)){ logtext += 'D'; }
+        //Player1の入力(コントローラから)
+        if(Input.GetAxis("Horizontal") > 0) {logtext += '>' ;}
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.A)){ logtext += 'A'; }
+        if(Input.GetAxis("Horizontal") < 0) {logtext += '<' ;}
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.Q)){ logtext += 'Q'; }
+        if(Input.GetButtonDown("Jump")) {logtext += 'J' ;}
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.W)){ logtext += 'W'; }
-        else{ logtext += '-'; }
-        if(Input.GetKey(KeyCode.LeftArrow)){ logtext += '<'; }
+        if(Input.GetButtonDown("Fire1")) {logtext += 'F' ;}
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.RightArrow)){ logtext += '>'; }
+        //Player2の入力(キーボード) j,k,l,space
+        if(Input.GetKey(KeyCode.L)){ logtext += 'l'; }
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.O)){ logtext += 'O'; }
+        if(Input.GetKey(KeyCode.J)){ logtext += 'j'; }
         else{ logtext += '-'; }
 
-        if(Input.GetKey(KeyCode.P)){ logtext += 'P'; }
+        if(Input.GetKey(KeyCode.Space)){ logtext += 'S'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.K)){ logtext += 'k'; }
         else{ logtext += '-'; }
 
         StreamWriter sw = new StreamWriter("../LogData.txt", true);
