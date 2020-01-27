@@ -20,10 +20,41 @@ public class Logger : MonoBehaviour
     {
         //Debug.Log(Time.frameCount);
         GameObject p1 = GameObject.Find("Player");
+        GameObject p2 = GameObject.Find("Player2");
+
         logtext = "";
         logtext += p1.transform.position.x;
-        logtext += ",";
+        logtext += ", ";
         logtext += p1.transform.position.y;
+        logtext += ", ";
+        logtext += p2.transform.position.x;
+        logtext += ", ";
+        logtext += p2.transform.position.y;
+        logtext += ", ";
+
+        if(Input.GetKey(KeyCode.D)){ logtext += 'D'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.A)){ logtext += 'A'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.Q)){ logtext += 'Q'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.W)){ logtext += 'W'; }
+        else{ logtext += '-'; }
+        if(Input.GetKey(KeyCode.LeftArrow)){ logtext += '<'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.RightArrow)){ logtext += '>'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.O)){ logtext += 'O'; }
+        else{ logtext += '-'; }
+
+        if(Input.GetKey(KeyCode.P)){ logtext += 'P'; }
+        else{ logtext += '-'; }
+
         StreamWriter sw = new StreamWriter("../LogData.txt", true);
         sw.WriteLine(logtext);
         sw.Flush();
