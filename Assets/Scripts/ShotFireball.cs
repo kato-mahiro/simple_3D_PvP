@@ -35,9 +35,9 @@ public class ShotFireball : MonoBehaviour
                 hoge.minus();
                 //Instantiate(obj, firepoint.transform.position , transform.Rotate(transform.right, 45));
                 CC=CC.GetComponent<CharacterController>();
-                CC.enabled = false;
+                //CC.enabled = false;
 
-                Invoke("Restart", 1.0f);
+                //Invoke("Restart", 1.0f);
             }
         }
     }

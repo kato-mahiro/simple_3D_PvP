@@ -21,11 +21,11 @@ public class CharacterCollision : MonoBehaviour
         {
             if((this.transform.position.y - hit.transform.position.y) >= 0.3f)
             {
-                script.damage2();
+                script.Ldamage2();
             }
             else if((this.transform.position.y - hit.transform.position.y) <= -0.3f)
             {
-                script.damage();
+                script.Ldamage();
             }
         }
     }

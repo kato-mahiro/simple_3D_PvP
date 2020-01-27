@@ -54,6 +54,17 @@ public class UIDirector : MonoBehaviour
         this.hp2 -= 0.02f;
     }
 
+    public void Ldamage()
+    {
+        audioSource.PlayOneShot(damagesound);
+        this.hp -= 0.13f;
+    }
+
+    public void Ldamage2()
+    {
+        audioSource.PlayOneShot(damagesound);
+        this.hp2 -= 0.13f;
+    }
     public async void Update()
     {
         MessageManager m = refObj.GetComponent<MessageManager>();
